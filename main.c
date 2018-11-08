@@ -12,10 +12,8 @@ int main (void)
 
     if ((operacja > 0) && (operacja < 7))
     {
-        printf ("Podaj pierwsza liczbe: ");
-        scanf ("%f", &a);
-        printf ("Podaj druga liczbe: ");
-        scanf ("%f", &b);
+        printf ("Podaj dwie liczby: ");
+        scanf ("%f%f", &a, &b);
     }
 
     switch(operacja)
