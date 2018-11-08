@@ -5,8 +5,8 @@ int main (void)
 {
   unsigned char operacja;
   
-  printf ("Wybierz rodzaj operacji:\nDodawanie - 1\nOdejmowanie - 2\nMnozenie - 3\nDzielenie - 4\nPierwiastkowanie - 5\nPotegowanie - 6\n:); 
-  scanf ("%d", operacja);
+  printf ("Wybierz rodzaj operacji:\nDodawanie - 1\nOdejmowanie - 2\nMnozenie - 3\nDzielenie - 4\nPierwiastkowanie - 5\nPotegowanie - 6\n:"); 
+  scanf ("%d",&operacja);
   
   float a, b, wynik;        
   switch(operacja)
@@ -36,9 +36,15 @@ int main (void)
             scanf("%f",&a);
                  printf("podaj stopien pierwiastka %f",b);
             scanf("%f",&b);
-            wynik= pow(a(1/b));
+            wynik= pow(a,(1/b));
             break;
-            
+            case 6:
+            	printf("podaj podstawe potegi");
+             scanf("%f",&a);
+             printf("podaj wykladnik");
+             scanf("%f",&b);
+             wynik=pow(a,b);
+             break;
           }
   printf ("\nWynik: %f", wynik);
   getch ();
