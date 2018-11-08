@@ -1,49 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 int main (void)
 {
-    unsigned char operacja;
-
-    printf ("Wybierz rodzaj operacji:\n1 - Dodawanie\n2 - Odejmowanie\n3 - Mnozenie\n4 - Dzielenie\n5 - Pierwiastkowanie\n6 - Potegowanie\n:");
-    scanf ("%d", &operacja);
-
-    float a, b, wynik;
-
-    if ((operacja > 0) && (operacja < 7))
-    {
-        printf ("Podaj pierwsza liczbe: ");
-        scanf ("%f", &a);
-        printf ("Podaj druga liczbe: ");
-        scanf ("%f", &b);
-    }
-
-    switch(operacja)
-    {
-        case 1:
-            wynik = a + b;
+  unsigned char operacja;
+  
+  printf ("Wybierz rodzaj operacji:\nDodawanie - 1\nOdejmowanie - 2\nMnozenie - 3\nDzielenie - 4\nPierwiastkowanie - 5\nPotegowanie - 6\n:); 
+  scanf ("%d", operacja);
+  
+  float a, b, wynik;        
+  switch(operacja)
+          {
+            case 1:
+             printf("Podaj dwie liczby");
+             scanf ("%f%f", &a, &b);
+              wynik = a + b;
+              break;
+            case 2:
+             printf("Podaj dwie liczby");
+             scanf ("%f%f", &a, &b);
+              wynik = a - b;
+              break;
+            case 3 :
+             printf("Podaj dwie liczby");
+             scanf ("%f%f", &a, &b);
+            wynik= a*b ;
             break;
-        case 2:
-            wynik = a - b;
+            case 4:
+             printf("Podaj dwie liczby");
+             scanf ("%f%f", &a, &b);
+            wynik= a/b;
             break;
-        case 3:
-            wynik = a * b;
+            case 5:
+            printf("podaj liczbe do spierwiastkoawani %f",a);
+            scanf("%f",&a);
+                 printf("podaj stopien pierwiastka %f",b);
+            scanf("%f",&b);
+            wynik= pow(a(1/b));
             break;
-        case 4:
-            wynik = a / b;
-            break;
-        case 5:
-            wynik = pow (a, 1 / b);
-            break;
-        case 6:
-            wynik = pow (a, b);
-            break;
-        default:
-            printf ("Niepoprawnie wybrano operacje.");
-    }
-
-    if ((operacja > 0) && (operacja < 7)) printf ("\nWynik: %f", wynik);
-
-    getch ();
-    return 0;
+            
+          }
+  printf ("\nWynik: %f", wynik);
+  getch ();
+  return 0;
 }
