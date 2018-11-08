@@ -3,30 +3,33 @@
 
 int main (void)
 {
-  unsigned char operacja;
-  
-  printf ("Wybierz rodzaj operacji:\nDodawanie - 1\nOdejmowanie - 2\nMnozenie - 3\nDzielenie - 4\nPierwiastkowanie - 5\nPotegowanie - 6\n:); 
-  scanf ("%d", operacja);
-  
-  float a, b, wynik;        
-  printf ("Podaj dwie liczby: ");
-  scanf ("%f%f", &a, &b);
-  switch(operacja)
-          {
-          case 1:
+    unsigned char operacja;
+
+    printf ("Wybierz rodzaj operacji:\n1 - Dodawanie\n2 - Odejmowanie\n3 - Mnozenie\n4 - Dzielenie\n5 - Pierwiastkowanie\n6 - Potegowanie\n:");
+    scanf ("%d", &operacja);
+
+    float a, b, wynik;
+    printf ("Podaj pierwsza liczbe: ");
+    scanf ("%f", &a);
+    printf ("Podaj druga liczbe: ");
+    scanf ("%f", &b);
+
+    switch(operacja)
+    {
+        case 1:
             wynik = a + b;
             break;
-          case 2:
+        case 2:
             wynik = a - b;
             break;
-          case 3:
+        case 3:
             wynik = a * b;
             break;
-          case 4:
+        case 4:
             wynik = a / b;
             break;
-          }
-  printf ("\nWynik: %f", wynik);
-  getch ();
-  return 0;
+    }
+    printf ("\nWynik: %f", wynik);
+    getch ();
+    return 0;
 }
