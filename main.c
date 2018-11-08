@@ -9,10 +9,14 @@ int main (void)
     scanf ("%d", &operacja);
 
     float a, b, wynik;
-    printf ("Podaj pierwsza liczbe: ");
-    scanf ("%f", &a);
-    printf ("Podaj druga liczbe: ");
-    scanf ("%f", &b);
+
+    if ((operacja > 0) && (operacja < 7))
+    {
+        printf ("Podaj pierwsza liczbe: ");
+        scanf ("%f", &a);
+        printf ("Podaj druga liczbe: ");
+        scanf ("%f", &b);
+    }
 
     switch(operacja)
     {
@@ -28,8 +32,18 @@ int main (void)
         case 4:
             wynik = a / b;
             break;
+        case 5:
+            wynik = pow (a, 1 / b);
+            break;
+        case 6:
+            wynik = pow (a, b);
+            break;
+        default:
+            printf ("Niepoprawnie wybrano operacje.");
     }
-    printf ("\nWynik: %f", wynik);
+
+    if ((operacja > 0) && (operacja < 7)) printf ("\nWynik: %f", wynik);
+
     getch ();
     return 0;
 }
