@@ -15,7 +15,20 @@ int main (void)
         printf ("Podaj dwie liczby: ");
         scanf ("%f%f", &a, &b);
     }
-    
+     switch(operacja)
+    {
+        case 1:
+            wynik = a + b;
+            break;
+        case 2:
+            wynik = a - b;
+            break;
+        case 3:
+            wynik = a * b;
+            break;
+        case 4:
+            wynik = a / b;
+            break;}
     getch ();
     return 0;
 }
