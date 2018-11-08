@@ -3,6 +3,7 @@
 
 int main (void)
 {
+    printf ("Test");
     getch ();
     return 0;
 }
