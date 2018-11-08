@@ -38,6 +38,8 @@ int main (void)
         default:
             printf ("Niepoprawnie wybrano operacje.")
      }
+ if ((operacja > 0) && (operacja < 7)) printf ("\nWynik: %f", wynik);
+
     getch ();
     return 0;
 }
