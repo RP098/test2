@@ -29,6 +29,14 @@ int main (void)
         case 4:
             wynik = a / b;
             break;
+        case 5:
+            wynik = pow (a, 1 / b);
+            break;
+        case 6:
+            wynik = pow (a, b);
+            break;
+        default:
+            printf ("Niepoprawnie wybrano operacje.")
      }
     getch ();
     return 0;
